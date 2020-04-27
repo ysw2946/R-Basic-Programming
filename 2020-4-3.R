@@ -30,9 +30,11 @@ length(x)
 nrow(x); ncol(x)
 dim(x)
 
+dim(x)[1]
+dim(x)[2]
+
 xyz <- array(1:24, c(4,3,2))
 xyz
-
 dimnames(xyz) <- list(X=c("x1","x2","x3","x4"),
                       Y=c("y1","y2","y3"),
                       Z=c("z1","z2"))
@@ -43,6 +45,7 @@ x[2,3]
 x[1,]
 x[,2]
 x[1:2,]
+x[1:2,c(1,3)]
 
 xyz <- array(1:24, c(4,3,2))
 xyz[,1,1]

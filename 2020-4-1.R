@@ -69,7 +69,7 @@ factor(income, order=TRUE, level=c("Low","Medium","High"))
 
 x <- c(80,88,90,93,95,94,100,78,65)
 x3 <- 1*(x>=90) + 2*(x>=80 & x <90) + 3*(x<80)
-x3_f <- factor(x3, labels=c("C","B","A")) # 순서형은 level 숫자형벡터 변환은 labels
+x3_f <- factor(x3, labels=c("A","B","C")) # 순서형은 level 숫자형벡터 변환은 labels
 x3_f
 
 cat.x <- cut(x, breaks=c(0,80,90,100), include.lowest=TRUE,
