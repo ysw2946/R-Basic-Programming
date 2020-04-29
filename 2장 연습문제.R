@@ -34,3 +34,68 @@ iris
 str(iris)
 head(iris,3)
 tail(iris,3)
+
+# 7.
+library(tidyverse)
+df <- data.frame(x=1,y=1:9,z=rep(1:3,each=3),w=sample(letters, 9))
+df
+df1 <- as_tibble(df)
+
+# 7.1
+df[[2]]
+df[["y"]]
+df$y
+
+# 7.2
+head(df[2],5)
+head(df1[2],5)
+
+# 8
+seq(-5,5,0.2)
+
+a <- seq(1,10,2)
+b <- seq(2,10,2)
+c(a,b)
+
+rep(1:3,time=3)
+
+rep(c("a","b"),c(2,3))
+
+paste("a",1:5,sep="")
+
+z <- c("a","b","c")
+
+paste(c("a","b","c"),rep(c("a","b","c"),each=3),sep="")
+
+# 9
+a1 <- paste(letters,1:26,sep="")
+a1
+a2 <- paste(a1,collapse="-")
+a2
+a3 <- paste0(a1,collapse="")
+a3
+
+# 10
+x <- c(10.4,5.6,3.1,6.4,21.7)
+mean_x <- (sum(x)/length(x))
+mean_x
+mean(x)
+
+std_x <- sqrt(sum((x-mean_x)^2/(length(x)-1)))
+std_x              
+sd(x)
+
+n <- 1:4
+x[n+1]-x[n]
+diff(x)
+
+# 11
+y <- c(17,16,20,24,22,15,21,18)
+y
+y[which.max(y)] <- 23
+y
+
+sum(y > 20)
+mean(y < 18)*100
+
+# 12
