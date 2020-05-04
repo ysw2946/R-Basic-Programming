@@ -99,3 +99,19 @@ sum(y > 20)
 mean(y < 18)*100
 
 # 12
+score <- c(85,91,75,69,52,95,88,100)
+score3 <- 1*(score >= 90) + 2*(score >= 80 & score < 90) + 3*(score >= 70 & score < 80) + 4*(score >= 60 & score < 70) + 5*(score < 60)
+
+grade_f <- factor(score3,labels=c("A","B","C","D","F"))
+grade_f
+
+grade_c <-cut(score, breaks=c(0,60,70,80,90,100),include.lowest=FALSE,
+            right=TRUE,labels=c("F","D","C","B","A"))
+grade_c
+
+sg <- data.frame(score,grade_f)
+sg
+
+# 13
+x <- c(1,3,2,7,12,6,1,3,6,6,7)
+y
