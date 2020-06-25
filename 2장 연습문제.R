@@ -27,7 +27,7 @@ m1[,2]
 # 5.
 d1 <- data.frame(var1 = c(12,17,19), var2 = c(21,22,25), var3 = c(32,34,35))
 d1
-d1["var2"]
+d1[2]
 
 # 6.
 iris
@@ -40,7 +40,8 @@ library(tidyverse)
 df <- data.frame(x=1,y=1:9,z=rep(1:3,each=3),w=sample(letters, 9))
 df
 df1 <- as_tibble(df)
-
+df[1]
+df1[1]
 # 7.1
 df[[2]]
 df[["y"]]
@@ -94,6 +95,7 @@ diff(x)
 
 # 11
 y <- c(17,16,20,24,22,15,21,18)
+
 y
 y[y==max(y)] <- 23
 y
@@ -112,7 +114,7 @@ grade_c <-cut(score, breaks=c(0,60,70,80,90,100),include.lowest=TRUE,
             right=FALSE,labels=c("F","D","C","B","A"))
 grade_c
 
-sg <- data.frame(score,grade_f)
+sg <- data.frame(score,grade_c)
 sg
 
 # 13
